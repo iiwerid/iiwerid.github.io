@@ -1,0 +1,941 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="tool,emacs," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1 &amp;#x6B63;&amp;#x6587;&amp;#x6807;&amp;#x9898;&amp;#xFF1A;&amp;#x4F7F;&amp;#x7528;*+&amp;#x7A7A;&amp;#x683C;
+
+
+&amp;#x6700;&amp;#x591A;&amp;#x5341;&amp;#x4E2A;*
+
+
+
+&amp;#x6BB5;&amp;#x843D;&amp;#x4E00;
+
+
+
+&amp;#x6BB5;&amp;#x843D;2
+&amp;#x6BB5;&amp;#x843D;3
+
+
+
+S-tab:&amp;#x5C55;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="org-modeѧϰ">
+<meta property="og:url" content="http://iiwerid.github.io/2015/06/06/OrgMode学习/index.html">
+<meta property="og:site_name" content="Werid Memory">
+<meta property="og:description" content="1 &amp;#x6B63;&amp;#x6587;&amp;#x6807;&amp;#x9898;&amp;#xFF1A;&amp;#x4F7F;&amp;#x7528;*+&amp;#x7A7A;&amp;#x683C;
+
+
+&amp;#x6700;&amp;#x591A;&amp;#x5341;&amp;#x4E2A;*
+
+
+
+&amp;#x6BB5;&amp;#x843D;&amp;#x4E00;
+
+
+
+&amp;#x6BB5;&amp;#x843D;2
+&amp;#x6BB5;&amp;#x843D;3
+
+
+
+S-tab:&amp;#x5C55;&amp;">
+<meta property="og:updated_time" content="2016-06-06T09:45:39.471Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="org-modeѧϰ">
+<meta name="twitter:description" content="1 &amp;#x6B63;&amp;#x6587;&amp;#x6807;&amp;#x9898;&amp;#xFF1A;&amp;#x4F7F;&amp;#x7528;*+&amp;#x7A7A;&amp;#x683C;
+
+
+&amp;#x6700;&amp;#x591A;&amp;#x5341;&amp;#x4E2A;*
+
+
+
+&amp;#x6BB5;&amp;#x843D;&amp;#x4E00;
+
+
+
+&amp;#x6BB5;&amp;#x843D;2
+&amp;#x6BB5;&amp;#x843D;3
+
+
+
+S-tab:&amp;#x5C55;&amp;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> org-modeѧϰ | Werid Memory </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Werid Memory</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">虽千万人吾往矣</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                org-modeѧϰ
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2015-06-06T00:00:00+08:00" content="2015-06-06">
+              2015-06-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tool/" itemprop="url" rel="index">
+                    <span itemprop="name">tool</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/06/06/OrgMode学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/06/OrgMode学习/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> &#x6B63;&#x6587;&#x6807;&#x9898;&#xFF1A;&#x4F7F;&#x7528;*+&#x7A7A;&#x683C;</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+&#x6700;&#x591A;&#x5341;&#x4E2A;*
+</p>
+
+<p>
+&#x6BB5;&#x843D;&#x4E00;
+</p>
+
+<p>
+&#x6BB5;&#x843D;2<br>
+&#x6BB5;&#x843D;3
+</p>
+
+<p>
+S-tab:&#x5C55;&#x5F00;&#xFF0C;&#x6298;&#x53E0;&#x6240;&#x6709;&#x7AE0;&#x8282;
+tab:&#x5BF9;&#x5149;&#x6807;&#x6240;&#x5728;&#x7684;&#x7AE0;&#x8282;&#x8FDB;&#x884C;&#x5C55;&#x5F00;&#x6298;&#x53E0;
+</p>
+
+<p>
+M-left/right:&#x5347;&#x7EA7;&#x964D;&#x7EA7;&#x6807;&#x9898;&#xFF1B;
+</p>
+
+<p>
+<b>&#x7C97;&#x4F53;</b>
+<i>&#x659C;&#x4F53;</i>
+<del>&#x5220;&#x9664;&#x7EBF;</del>
+<span class="underline">&#x4E0B;&#x5212;&#x7EBF;</span>
+&#x4E0B;&#x6807;: H<sub>2</sub> O
+&#x4E0A;&#x6807;: E=mc<sup>2</sup>
+&#x7B49;&#x5BBD;&#x5B57;:  <code>git</code>    <code>FFF</code> 
+</p>
+
+
+<p>
+C-*&#xFF1A;&#x5C06;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x53D8;&#x6210;&#x6807;&#x9898;&#xFF1B;
+</p>
+</div>
+
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> &#x5217;&#x8868;</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+&#x53EF;&#x4EE5;&#x52A0;&#x5165;checkbox&#xFF0C;&#x6765;&#x6807;&#x8BB0;&#x4EFB;&#x52A1;&#x7684;&#x5B8C;&#x6210;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5B50;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x60C5;&#x51B5;&#x8BA1;&#x7B97;&#x603B;&#x4EFB;&#x52A1;&#x8FDB;&#x5EA6;;
+</p>
+<ul class="org-ul">
+<li>M-S-RET&#xFF0C;&#x4F1A;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x81EA;&#x5E26;checkbox&#x7684;&#x5217;&#x8868;&#x9879;&#xFF1B;
+</li>
+<li>C-c C-c&#x6539;&#x53D8;checkbox&#x72B6;&#x6001;&#xFF1B;
+</li>
+<li>M-left/right&#xFF1A;&#x6539;&#x53D8;&#x5217;&#x8868;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#xFF1B;
+</li>
+<li>M-up/down&#xFF1A;&#x4E0A;&#x4E0B;&#x79FB;&#x52A8;&#x5217;&#x8868;&#x9879;
+</li>
+<li><code>[X]</code> &#x5B8C;&#x6210;&#x5408;&#x6210;&#x5BA0;&#x7269;&#x7684;&#x7B97;&#x6CD5;&#x6539;&#x8FDB;&#xFF1B; <code>[3/3]</code>
+<ol class="org-ol">
+<li><code>[X]</code> &#x5206;&#x6790;&#x76EE;&#x524D;&#x5408;&#x6210;&#x5BA0;&#x7269;&#x7684;&#x7B97;&#x6CD5;;
+</li>
+<li><code>[X]</code> &#x5BF9;&#x9700;&#x8981;&#x6539;&#x8FDB;&#x7684;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#xFF0C;&#x5206;&#x6790;&#xFF1B;
+</li>
+<li><code>[X]</code> &#x7F16;&#x7801;&#xFF0C;&#x6D4B;&#x8BD5;&#x8FDB;&#x884C;&#x6539;&#x8FDB;&#xFF1B;
+</li>
+</ol>
+</li>
+</ul>
+
+
+
+<p>
+&#x6709;&#x5E8F;&#xFF1A;&#x4EE5;1. &#x6216;&#x8005;1) &#x5F00;&#x5934; &#x52A0; &#x7A7A;&#x683C;&#xFF1B;
+&#x65E0;&#x5E8F;:&#x4EE5;-&#xFF0C;+&#xFF0C;* &#x5F00;&#x5934;&#xFF1B;
+   &#x5217;&#x8868;&#x7ED3;&#x675F;&#x9700;&#x8981;&#x7A7A;&#x4FE9;&#x884C;&#xFF0C; &#x5982;&#x679C;&#x60F3;&#x52A0;&#x5165;&#x540C;&#x7EA7;&#x522B;&#x7684;&#x53EF;&#x4EE5;M-RET
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> &#x811A;&#x6CE8;</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> &#x8868;&#x683C;</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+&#x8F93;&#x5165;&#x8868;&#x5934;&#xFF1A;
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="left">
+
+<col class="right">
+
+<col class="right">
+
+<col class="right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Name</th>
+<th scope="col" class="right">num</th>
+<th scope="col" class="right">sub</th>
+<th scope="col" class="right">totle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Hello</td>
+<td class="right">123</td>
+<td class="right">90</td>
+<td class="right">213</td>
+</tr>
+
+<tr>
+<td class="left">llo</td>
+<td class="right">345</td>
+<td class="right">91</td>
+<td class="right">436</td>
+</tr>
+</tbody>
+</table>
+<p>
+&#x5728;#+TBLFM&#x4F4D;&#x7F6E;&#x4F7F;&#x7528;C-c C-c&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x8868;&#x683C;&#xFF1B;
+&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#xFF1A;&#x4F7F;&#x7528;|&#x4F5C;&#x4E3A;&#x8868;&#x683C;&#x5206;&#x9694;&#xFF0C; tab&#x5207;&#x6362;&#xFF1B;  &#x8F93;&#x5165;|- &#x7136;&#x540E;&#x6309;tab&#x4F1A;&#x4EA7;&#x751F;&#x5206;&#x5272;&#x7EBF;&#xFF1B;
+         tab/shift tab ; &#x5BF9;&#x5176;&#x8868;&#x683C;C-c C-c; 
+         &#x5728;totle&#x4E00;&#x5217;&#xFF0C;&#x7684;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#x8F93;&#x5165;=$2+$3;&#x7136;&#x540E;C-u C-c C-c&#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x51FA;totle 
+         &#x4F7F;&#x7528;enter&#xFF0C;&#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x5217;&#xFF1B;
+         &#x4F7F;&#x7528;M-&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x79FB;&#x52A8;&#x884C;&#x5217;&#xFF0C;&#x4E0A;&#x4E0B;&#x79FB;&#x52A8;&#x884C;&#xFF0C;&#x5DE6;&#x53F3;&#x79FB;&#x52A8;&#x5217;&#xFF1B;
+         &#x4F7F;&#x7528;M-S-&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#xFF0C;&#x63D2;&#x5165;&#x884C;&#x5217;
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> &#x94FE;&#x63A5;</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+&#x4F7F;&#x7528;[[]], &#x4E2D;&#x95F4;&#x7A7A;&#x683C;&#xFF1B;&#x5185;&#x5BB9;&#xFF1B;    <i> www.batter </i>
+&#x5982;&#x679C;&#x662F;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#xFF0C;&#x56FE;&#x7247;&#xFF0C;pdf html&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;C-c C-x C-v &#x8BA9;&#x5176;&#x663E;&#x793A;&#x9884;&#x89C8;&#xFF1B;
+[[<a href="http://xxxx][]]%EF%BC%9A" target="_blank" rel="external">http://xxxx][]]%EF%BC%9A</a> &#x7B2C;&#x4E8C;&#x4E2A;[]&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF1B;&#x4F46;&#x662F;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x5185;&#x5BB9;&#xFF1B;
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> &#x5F85;&#x529E;&#x4E8B;&#x9879;GTD</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+&#x4F7F;&#x7528;*, &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A;*&#x8BBE;&#x7F6E;&#x5B50;&#x4EFB;&#x52A1;&#xFF0C; &#x7136;&#x540E;&#x7A7A;&#x683C;&#x52A0;TODO&#xFF0C; &#x914D;&#x5408;[] &#x8BBE;&#x7F6E;&#x4EFB;&#x52A1;&#xFF1B;
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-1-5-0-1" name="sec-1-5-0-1"></a><span class="todo TODO">TODO</span> [# A] &#x770B;&#x4E66;<br></li>
+<li><a id="sec-1-5-0-2" name="sec-1-5-0-2"></a><span class="todo TODO">TODO</span> <br><ol class="org-ol"><li><a id="sec-1-5-0-2-1" name="sec-1-5-0-2-1"></a><span class="todo TODO">TODO</span> <br><div class="outline-text-6" id="text-1-5-0-2-1">
+<ul class="org-ul">
+<li><code>[-]</code> subrenwu <code>[1/3]</code>
+<ol class="org-ol">
+<li><code>[&#xA0;]</code> osub2 
+</li>
+<li><code>[X]</code> osu
+</li>
+</ol>
+</li>
+</ul>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-1-5-0-3" name="sec-1-5-0-3"></a><span class="todo TODO">TODO</span> <br><div class="outline-text-5" id="text-1-5-0-3">
+<p>
+&#x5E38;&#x89C1;&#x64CD;&#x4F5C;&#xFF1A;C-c C-t&#x53D8;&#x6362;todo&#x7684;&#x72B6;&#x6001;&#xFF1B;
+         C-c/t&#x4EE5;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#x5C55;&#x793A;&#x6240;&#x6709;&#x7684;todo&#xFF1B;
+         C-c C-c&#x6539;&#x53D8;checkbox&#x72B6;&#x6001;
+         C-c &#x8BBE;&#x7F6E;&#x4F18;&#x5148;&#x7EA7;&#xFF1B;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x7684;ABC
+         M-S-RET&#x63D2;&#x5165;&#x540C;&#x7EA7;&#x7684;TODO&#x6807;&#x7B7E;
+</p>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> &#x6807;&#x7B7E;Tags</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+&#x53EF;&#x4EE5;&#x7ED9;&#x6BCF;&#x4E2A;&#x7AE0;&#x8282;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF1B;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x6811;&#x7684;&#x7ED3;&#x6784;&#x6765;&#x67E5;&#x770B;&#x6240;&#x6709;&#x5E26;&#x6807;&#x7B7E;&#x7684;&#x7AE0;&#x8282;&#x3002;&#x5728;&#x6BCF;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x5B50;&#x6807;&#x7B7E;&#x4F1A;&#x81EA;&#x52A8;&#x7EE7;&#x627F;&#x7236;&#x6807;&#x9898;&#x6807;&#x7B7E;&#xFF1B;
+&#x8F93;&#x5165;&#xFF1A;
+</p>
+</div>
+<div id="outline-container-sec-1-6-1" class="outline-4">
+<h4 id="sec-1-6-1"><span class="section-number-4">1.6.1</span> &#x7AE0;&#x6807;&#x9898;&#xA0;&#xA0;&#xA0;<span class="tag"><span class="work">work</span>&#xA0;<span class="learn">learn</span></span></h4>
+<div class="outline-text-4" id="text-1-6-1">
+</div><ol class="org-ol"><li><a id="sec-1-6-1-1" name="sec-1-6-1-1"></a>&#x8282;&#x6807;&#x9898;&#xA0;&#xA0;&#xA0;<span class="tag"><span class="fly">fly</span>&#xA0;<span class="plane">plane</span></span><br></li>
+<li><a id="sec-1-6-1-2" name="sec-1-6-1-2"></a>&#x8282;&#x6807;&#x9898;2&#xA0;&#xA0;&#xA0;<span class="tag"><span class="car">car</span>&#xA0;<span class="run">run</span></span><br><div class="outline-text-5" id="text-1-6-1-2">
+<p>
+C-c C-q &#x4E3A;&#x6807;&#x9898;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;&#xFF1B;
+C-c / m &#x751F;&#x6210;&#x5E26;&#x6807;&#x7B7E;&#x7684;&#x6811;&#xFF1B;
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> &#x65F6;&#x95F4;</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+&#x6253;&#x5F00;&#x65E5;&#x5386;&#xFF0C;&#x70B9;&#x9009;&#x76F8;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x63D2;&#x5165;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF1B;C-c .   &#x7136;&#x540E;&#x9009;&#x62E9;&#x76F8;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#xFF0C;RET
+</p>
+
+<p>
+&#x65F6;&#x95F4;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x52A0;&#x7C7B;&#x578B;&#xFF1A;DEADLINE, SCHEDULED;
+&#x5982;&#xFF1A;
+</p>
+</div>
+<div id="outline-container-sec-1-7-1" class="outline-4">
+<h4 id="sec-1-7-1"><span class="section-number-4">1.7.1</span> <span class="todo TODO">TODO</span> &#x6D17;&#x8863;&#x670D;</h4>
+<div class="outline-text-4" id="text-1-7-1">
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> &#x5BCC;&#x6587;&#x672C;&#x5230;&#x5904;</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+&#x5BFC;&#x51FA;&#x5404;&#x79CD;&#x683C;&#x5F0F;:HTML ,PDF,&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x6765;&#x5236;&#x5B9A;&#x5BFC;&#x51FA;&#x9009;&#x9879;&#xFF1B;
+</p>
+
+<p>
+&#x8BBE;&#x7F6E;&#x6807;&#x9898;&#x548C;&#x76EE;&#x5F55;&#xFF1A;
+</p>
+<p>
+&#x8BBE;&#x7F6E;&#x5C45;&#x4E2D;&#xFF1A;
+</p>
+<p>
+evert &#x2026;&#x2026;
+</p>
+<p>
+&#x8BBE;&#x7F6E;&#x6837;&#x4F8B;&#xFF1A;&#x6CE8;&#x91CA;
+</p>
+<p>
+&#x6B64;&#x5904;&#x6CE8;&#x91CA;&#x4E0D;&#x4F1A;&#x88AB;&#x5BFC;&#x51FA;
+</p>
+<p>
+lATEX&#x4F7F;&#x7528;
+</p>
+
+<p>
+&#x63D2;&#x5165;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;
+1.&#x5FEB;&#x901F;&#x63D2;&#x5165;&#x6837;&#x677F;&#xFF1A;&lt;s TAB   &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1B;
+</p>
+<pre class="example">
+</pre>
+<p>
+&#x4F7F;&#x7528;c&#xFF1A;
+</p>
+<div class="org-src-container">
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+</div>
+
+<div class="org-src-container">
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</div>
+<p>
+2.&#x76F4;&#x63A5;&#x6C42;&#x51FA;&#x7ED3;&#x679C;,&#x5728;&#x8868;&#x8FBE;&#x5F0F;&#x5904;C-c C-c &apos;&#xFF0C; &#x5C06;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x7ED3;&#x679C;&#xFF1B;
+</p>
+
+<p>
+(+ 1 2 3 4)
+</p>
+</div>
+</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tool/" rel="tag">#tool</a>
+          
+            <a href="/tags/emacs/" rel="tag">#emacs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/05/19/js/" rel="next" title="javascript重新介绍">
+                <i class="fa fa-chevron-left"></i> javascript重新介绍
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/29/org备忘录/" rel="prev" title="org备忘录">
+                org备忘录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Werid Lin" />
+          <p class="site-author-name" itemprop="name">Werid Lin</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Kategorien</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">1 正文标题：使用*+空格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 脚注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-3"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-4"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-5"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 待办事项GTD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-6"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 标签Tags</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-6-1"><span class="nav-number">1.6.1.</span> <span class="nav-text">1.6.1 章标题   work learn</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-7"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 时间</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-7-1"><span class="nav-number">1.7.1.</span> <span class="nav-text">1.7.1 TODO 洗衣服</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-8"><span class="nav-number">1.8.</span> <span class="nav-text">1.8 富文本到处</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Werid Lin</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'iiwerid';
+      var disqus_identifier = '2015/06/06/OrgMode学习/';
+      var disqus_title = 'org-modeѧϰ';
+      var disqus_url = 'http://iiwerid.github.io/2015/06/06/OrgMode学习/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

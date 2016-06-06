@@ -1,0 +1,978 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1 Javascript&amp;#x91CD;&amp;#x65B0;&amp;#x4ECB;&amp;#x7ECD;
+
+
+1.1 &amp;#x7C7B;&amp;#x578B;
+
+
+Number
+
+String
+
+Boolean
+
+Symbol
+
+Object
+
+Function
+
+Array
+
+Date
+
+RegExp
+
+
+
+Null
+
+Undefined
+
+Error(&amp;#x5185;&amp;#x7F6E;)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript重新介绍">
+<meta property="og:url" content="http://iiwerid.github.io/2014/05/19/js/index.html">
+<meta property="og:site_name" content="Werid Memory">
+<meta property="og:description" content="1 Javascript&amp;#x91CD;&amp;#x65B0;&amp;#x4ECB;&amp;#x7ECD;
+
+
+1.1 &amp;#x7C7B;&amp;#x578B;
+
+
+Number
+
+String
+
+Boolean
+
+Symbol
+
+Object
+
+Function
+
+Array
+
+Date
+
+RegExp
+
+
+
+Null
+
+Undefined
+
+Error(&amp;#x5185;&amp;#x7F6E;)">
+<meta property="og:updated_time" content="2016-05-19T06:35:42.130Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript重新介绍">
+<meta name="twitter:description" content="1 Javascript&amp;#x91CD;&amp;#x65B0;&amp;#x4ECB;&amp;#x7ECD;
+
+
+1.1 &amp;#x7C7B;&amp;#x578B;
+
+
+Number
+
+String
+
+Boolean
+
+Symbol
+
+Object
+
+Function
+
+Array
+
+Date
+
+RegExp
+
+
+
+Null
+
+Undefined
+
+Error(&amp;#x5185;&amp;#x7F6E;)">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> javascript重新介绍 | Werid Memory </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Werid Memory</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">虽千万人吾往矣</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript重新介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2014-05-19T19:33:00+08:00" content="2014-05-19">
+              2014-05-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/05/19/js/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/05/19/js/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Javascript&#x91CD;&#x65B0;&#x4ECB;&#x7ECD;</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> &#x7C7B;&#x578B;</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Number
+</li>
+<li>String
+</li>
+<li>Boolean
+</li>
+<li>Symbol
+</li>
+<li>Object
+<ul class="org-ul">
+<li>Function
+</li>
+<li>Array
+</li>
+<li>Date
+</li>
+<li>RegExp
+</li>
+</ul>
+</li>
+<li>Null
+</li>
+<li>Undefined
+</li>
+<li>Error(&#x5185;&#x7F6E;)
+</li>
+</ul>
+<a id="more"></a>
+</div>
+
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> Number&#x6570;&#x5B57;</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div><ol class="org-ol"><li><a id="sec-1-1-1-1" name="sec-1-1-1-1"></a>&#x5185;&#x7F6E;&#x5BF9;&#x8C61;Math:<br><div class="outline-text-5" id="text-1-1-1-1">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sin(<span class="number">3.5</span>)</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</li>
+
+<li><a id="sec-1-1-1-2" name="sec-1-1-1-2"></a>&#x5185;&#x7F6E;&#x51FD;&#x6570;parseInt:<br><div class="outline-text-5" id="text-1-1-1-2">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">&quot;124&quot;</span>, <span class="number">10</span>); <span class="comment">//&#x4F7F;&#x7528;10&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x6210;&#x6570;&#x5B57;; &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x6570;&#x503C;, &#x5219;&#x8FD4;&#x56DE;NaN, not a number</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</li>
+
+<li><a id="sec-1-1-1-3" name="sec-1-1-1-3"></a>NaN: Not a Number<br><div class="outline-text-5" id="text-1-1-1-3">
+<ol class="org-ol">
+<li>&#x4E0D;&#x80FD;&#x53C2;&#x4E0E;&#x4EFB;&#x4F55;&#x6570;&#x5B66;&#x8FD0;&#x7B97;: &#x6BD4;&#x5982;
+</li>
+</ol>
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="literal">NaN</span> + <span class="number">5</span></span><br></pre></td></tr></table></figure>
+</div>
+<ol class="org-ol">
+<li>isNaN(xx)
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-1-1-4" name="sec-1-1-1-4"></a>&#x7279;&#x6B8A;&#x503C;<br><div class="outline-text-5" id="text-1-1-1-4">
+<p>
+Infinity, -Infinity: &#x6B63;&#x65E0;&#x7A77;, &#x8D1F;&#x65E0;&#x7A77;;
+isFinite() : &#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5426;&#x662F;Infinity, -Infinity, NaN;
+</p>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> String&#x5B57;&#x7B26;&#x4E32;</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+&#x662F;&#x4E00;&#x4E32;Unicode&#x5B57;&#x7B26;&#x5E8F;&#x5217;;utf-16&#x7F16;&#x7801;
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> &#x5176;&#x4ED6;&#x7C7B;&#x578B;</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+null:&#x5173;&#x952E;&#x5B57;, undefined:&#x662F;&#x4E00;&#x4E2A;&quot;undefined&quot;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;, &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x503C;;undefined&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;;
+</p>
+</div>
+
+<ol class="org-ol"><li><a id="sec-1-1-3-1" name="sec-1-1-3-1"></a>&#x8F6C;&#x6362;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x7684;&#x89C4;&#x5219;:<br><div class="outline-text-5" id="text-1-1-3-1">
+<ol class="org-ol">
+<li>false, 0, &quot;&quot;, NaN, null &#x548C; undefined &#x90FD;&#x8F6C;&#x6362;&#x4E3A;false;
+</li>
+<li>&#x5176;&#x4ED6;&#x4E3A;true;
+</li>
+</ol>
+<p>
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Boolean(xx) &#x8FDB;&#x884C;&#x663E;&#x793A;&#x8F6C;&#x6362;;
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> &#x5BF9;&#x8C61;</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+javascript&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x6210;&quot;&#x540D;&#x79F0;-&#x503C;&quot;, &#x4E5F;&#x5C31;&#x662F;&#x952E;&#x503C;&#x5BF9;;
+</p>
+</div>
+
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> &#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x4FE9;&#x79CD;&#x65B9;&#x6CD5;</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">var</span> obj1 = {};</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> &#x5C5E;&#x6027;&#x8BBF;&#x95EE;</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">obj.color;</span><br><span class="line">obj[<span class="string">&quot;color&quot;</span>];</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> &#x5BF9;&#x8C61;&#x539F;&#x578B;</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div><ol class="org-ol"><li><a id="sec-1-2-3-1" name="sec-1-2-3-1"></a>&#x5B9A;&#x4E49;:<br><div class="outline-text-5" id="text-1-2-3-1">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>{</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</li>
+<li><a id="sec-1-2-3-2" name="sec-1-2-3-2"></a>&#x521B;&#x5EFA;&#x5BF9;&#x8C61;<br><div class="outline-text-5" id="text-1-2-3-2">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> you = <span class="keyword">new</span> Person(<span class="string">&quot;name&quot;</span>, <span class="number">11</span>);</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> &#x6570;&#x7EC4;</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> &#x521B;&#x5EFA;:</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ol class="org-ol">
+<li>var a = new Array();
+</li>
+<li>var a = [1, 2, 33];
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> &#x957F;&#x5EA6;</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+a.length;
+&#x4F46;&#x662F;Array.length&#x7684;&#x957F;&#x5EA6;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x7B49;&#x4E8E;&#x5143;&#x7D20;&#x4E2A;&#x6570;, &#x6BD4;&#x5982;:
+</p>
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">a[ <span class="number">100</span> ] = <span class="number">45</span>; <span class="comment">//&#x6B64;&#x65F6;a.length= 101;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> &#x89C6;&#x56FE;&#x8BBF;&#x95EE;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x7D22;&#x5F15;, &#x8FD4;&#x56DE;undefined;</h4>
+</div>
+<div id="outline-container-sec-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4"><span class="section-number-4">1.3.4</span> &#x904D;&#x5386;&#x65B9;&#x5F0F;</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, item; item = a[i++];) {</span><br><span class="line">    <span class="comment">// Do something with item</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> a) {</span><br><span class="line">  <span class="comment">// Do something with a[i]</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">[<span class="string">&quot;dog&quot;</span>, <span class="string">&quot;cat&quot;</span>, <span class="string">&quot;hen&quot;</span>].forEach(<span class="function"><span class="keyword">function</span>(<span class="params">currentValue, index, array</span>) </span>{</span><br><span class="line">  <span class="comment">// Do something with currentValue or array[index]</span></span><br><span class="line">});</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5"><span class="section-number-4">1.3.5</span> &#x8FFD;&#x52A0;&#x5143;&#x7D20;</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+a.push(23);
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> &#x51FD;&#x6570;</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> &#x8FD4;&#x56DE;&#x503C;</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;, &#x8FD4;&#x56DE;undefined;
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> &#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x53C2;&#x6570;,&#x5219;&#x4F7F;&#x7528;undefined&#x66FF;&#x4EE3;;</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+&#x5982;&#x679C;&#x53C2;&#x6570;&#x8FC7;&#x591A;, &#x5219;&#x5FFD;&#x7565;;
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-3" class="outline-4">
+<h4 id="sec-1-4-3"><span class="section-number-4">1.4.3</span> arguments&#x5BF9;&#x8C61;</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+&#x5982;&#x679C;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x53C2;&#x6570;, &#x4F46;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x5165;&#x4E86;&#x53C2;&#x6570;; &#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;arguments&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;;
+&#x7C7B;&#x4F3C;&#x6570;&#x7EC4;;
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-4" class="outline-4">
+<h4 id="sec-1-4-4"><span class="section-number-4">1.4.4</span> apply&#x65B9;&#x6CD5;:</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<p>
+avg.apply(null, [1,2,3,4]); avg&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;, &#x5C06;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x6570;&#x7EC4;,&#x8F6C;&#x6362;&#x6210;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;avg&#x51FD;&#x6570;;
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> &#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makePerson</span>(<span class="params">first, last</span>) </span>{</span><br><span class="line">    <span class="keyword">return</span> {</span><br><span class="line">	first: first,</span><br><span class="line">	last: last,</span><br><span class="line">	fullName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">	    <span class="keyword">return</span> <span class="keyword">this</span>.first + <span class="string">&apos; &apos;</span> + <span class="keyword">this</span>.last;</span><br><span class="line">	},</span><br><span class="line">	fullNameReversed: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">	    <span class="keyword">return</span> <span class="keyword">this</span>.last + <span class="string">&apos;, &apos;</span> + <span class="keyword">this</span>.first;</span><br><span class="line">	}</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">s = makePerson(<span class="string">&quot;Simon&quot;</span>, <span class="string">&quot;Willison&quot;</span>);</span><br><span class="line">s.fullName(); <span class="comment">// Simon Willison</span></span><br><span class="line">s.fullNameReversed(); <span class="comment">// Willison, Simon</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&#x6539;&#x8FDB;&#x7684;person</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">first, last</span>) </span>{</span><br><span class="line">    <span class="keyword">this</span>.first = first;</span><br><span class="line">    <span class="keyword">this</span>.last = last;</span><br><span class="line">    <span class="keyword">this</span>.fullName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.first + <span class="string">&apos; &apos;</span> + <span class="keyword">this</span>.last;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">this</span>.fullNameReversed = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.last + <span class="string">&apos;, &apos;</span> + <span class="keyword">this</span>.first;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> Person(<span class="string">&quot;Simon&quot;</span>, <span class="string">&quot;Willison&quot;</span>);</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5-1" class="outline-4">
+<h4 id="sec-1-5-1"><span class="section-number-4">1.5.1</span> prototype</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+&#x5F53;&#x4F60;&#x8BD5;&#x56FE;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A; Person &#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x89E3;&#x91CA;&#x5668;&#x4F1A;&#x9996;&#x5148;&#x68C0;&#x67E5;&#x8FD9;&#x4E2A; Person.prototype &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4EFB;&#x4F55;&#x5206;&#x914D;&#x7ED9; Person.prototype &#x7684;&#x4E1C;&#x897F;&#x5BF9;&#x901A;&#x8FC7; this &#x5BF9;&#x8C61;&#x6784;&#x9020;&#x7684;&#x5B9E;&#x4F8B;&#x90FD;&#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;
+</p>
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">s = <span class="keyword">new</span> Person(<span class="string">&quot;Simon&quot;</span>, <span class="string">&quot;Willison&quot;</span>);</span><br><span class="line">s.firstNameCaps();  <span class="comment">// TypeError on line 1: s.firstNameCaps is not a function</span></span><br><span class="line"></span><br><span class="line">Person.prototype.firstNameCaps = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.first.toUpperCase()</span><br><span class="line">}</span><br><span class="line">s.firstNameCaps(); <span class="comment">// SIMON</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/03/06/jquery_note/" rel="next" title="JQuery学习">
+                <i class="fa fa-chevron-left"></i> JQuery学习
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/06/OrgMode学习/" rel="prev" title="org-modeѧϰ">
+                org-modeѧϰ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Werid Lin" />
+          <p class="site-author-name" itemprop="name">Werid Lin</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Kategorien</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">1 Javascript重新介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1 Number数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 String字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-1-3"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3 其他类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-2-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 创建对象的俩种方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-2-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 属性访问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-2-3"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 对象原型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-3"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 创建:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-3"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3 视图访问不存在的索引, 返回undefined;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-4"><span class="nav-number">1.3.4.</span> <span class="nav-text">1.3.4 遍历方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-5"><span class="nav-number">1.3.5.</span> <span class="nav-text">1.3.5 追加元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-4"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-4-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 返回值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-4-2"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 没有足够参数,则使用undefined替代;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-4-3"><span class="nav-number">1.4.3.</span> <span class="nav-text">1.4.3 arguments对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-4-4"><span class="nav-number">1.4.4.</span> <span class="nav-text">1.4.4 apply方法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-5"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 自定义对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-5-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.1 prototype</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Werid Lin</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'iiwerid';
+      var disqus_identifier = '2014/05/19/js/';
+      var disqus_title = 'javascript重新介绍';
+      var disqus_url = 'http://iiwerid.github.io/2014/05/19/js/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1092 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="1 JQuery&amp;#x5B66;&amp;#x4E60;
+
+
+1.1 JQuery&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x4F1A;&amp;#x51FA;&amp;#x73B0;?
+
+
+JQuery&amp;#x4E3B;&amp;#x8981;&amp;#x662F;&amp;#x4E3A;&amp;#x4E86;&amp;#x89E3;&amp;#x51B3;javascript&amp;#x7684;&amp;#x90E8;&amp;#x5206;&amp;#x4E0D;&amp;#x8D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JQuery学习">
+<meta property="og:url" content="http://iiwerid.github.io/2014/03/06/jquery_note/index.html">
+<meta property="og:site_name" content="Werid Memory">
+<meta property="og:description" content="1 JQuery&amp;#x5B66;&amp;#x4E60;
+
+
+1.1 JQuery&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x4F1A;&amp;#x51FA;&amp;#x73B0;?
+
+
+JQuery&amp;#x4E3B;&amp;#x8981;&amp;#x662F;&amp;#x4E3A;&amp;#x4E86;&amp;#x89E3;&amp;#x51B3;javascript&amp;#x7684;&amp;#x90E8;&amp;#x5206;&amp;#x4E0D;&amp;#x8D">
+<meta property="og:updated_time" content="2016-06-06T07:35:12.994Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQuery学习">
+<meta name="twitter:description" content="1 JQuery&amp;#x5B66;&amp;#x4E60;
+
+
+1.1 JQuery&amp;#x4E3A;&amp;#x4EC0;&amp;#x4E48;&amp;#x4F1A;&amp;#x51FA;&amp;#x73B0;?
+
+
+JQuery&amp;#x4E3B;&amp;#x8981;&amp;#x662F;&amp;#x4E3A;&amp;#x4E86;&amp;#x89E3;&amp;#x51B3;javascript&amp;#x7684;&amp;#x90E8;&amp;#x5206;&amp;#x4E0D;&amp;#x8D">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> JQuery学习 | Werid Memory </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Werid Memory</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">虽千万人吾往矣</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JQuery学习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2014-03-06T00:00:00+08:00" content="2014-03-06">
+              2014-03-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">in</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/03/06/jquery_note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/03/06/jquery_note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> JQuery&#x5B66;&#x4E60;</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> JQuery&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+JQuery&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;javascript&#x7684;&#x90E8;&#x5206;&#x4E0D;&#x8DB3;;
+</p>
+</div>
+
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> javascript&#x7684;&#x5F0A;&#x7AEF;</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ol class="org-ol">
+<li>&#x590D;&#x6742;&#x7684;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;DOM;
+</li>
+<li>&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x73B0;;
+</li>
+<li>&#x7F3A;&#x4E4F;&#x4FBF;&#x6377;&#x7684;&#x5F00;&#x53D1;,&#x8C03;&#x8BD5;&#x5DE5;&#x5177;;
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> JQuery&#x4F18;&#x70B9;</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ol class="org-ol">
+<li>&#x8F7B;&#x91CF;&#x7EA7;;
+</li>
+<li>&#x5F3A;&#x5927;&#x7684;&#x9009;&#x62E9;&#x5668;;
+</li>
+<li>&#x51FA;&#x8272;&#x7684;DOM&#x64CD;&#x4F5C;;
+</li>
+<li>&#x53EF;&#x9760;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;;
+</li>
+<li>&#x5B8C;&#x5584;&#x7684;&#x517C;&#x5BB9;&#x6027;;
+</li>
+<li>&#x94FE;&#x5F0F;&#x64CD;&#x4F5C;;
+</li>
+<li>&#x4E0D;&#x6C61;&#x67D3;&#x9876;&#x7EA7;&#x53D8;&#x91CF;:&#x53EA;&#x5EFA;&#x7ACB;jQuery&#x5BF9;&#x8C61;;
+</li>
+<li>&#x4E30;&#x5BCC;&#x7684;&#x63D2;&#x4EF6;;
+</li>
+<li>&#x5B8C;&#x5584;&#x7684;&#x6587;&#x6863;;
+</li>
+<li>&#x5F00;&#x6E90;;
+</li>
+</ol>
+
+<p>
+&#x7B80;&#x5316;&#x4E86;&#x904D;&#x5386;HTML&#x6587;&#x6863;, &#x64CD;&#x4F5C;dom, &#x5904;&#x7406;&#x4E8B;&#x4EF6;, &#x6267;&#x884C;&#x52A8;&#x753B;, &#x5F00;&#x53D1;Ajax&#x7684;&#x64CD;&#x4F5C;;
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> jQuery&#x4E0E;dom</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> $(document).ready()</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+&#x4E0E;window.onload&#x533A;&#x522B;;
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-1-2-1-1" name="sec-1-2-1-1"></a>&#x65F6;&#x673A;:<br><div class="outline-text-5" id="text-1-2-1-1">
+<p>
+window.onload: &#x5FC5;&#x987B;&#x7B49;&#x7F51;&#x9875;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x52A0;&#x8F7D;&#x5B8C;&#x624D;&#x6267;&#x884C;,&#x5305;&#x62EC;&#x56FE;&#x7247;&#x7B49;;
+$(document).ready:&#x6240;&#x6709;dom&#x7ED3;&#x6784;&#x7ED8;&#x5236;&#x5B8C;&#x6BD5;&#x540E;&#x6267;&#x884C;;
+</p>
+</div>
+</li>
+<li><a id="sec-1-2-1-2" name="sec-1-2-1-2"></a>&#x7F16;&#x5199;&#x4E2A;&#x6570;<br><div class="outline-text-5" id="text-1-2-1-2">
+<p>
+window.onload:&#x53EA;&#x80FD;&#x7F16;&#x5199;&#x4E00;&#x4E2A;; &#x591A;&#x4E2A;&#x4F1A;&#x88AB;&#x8986;&#x76D6;;
+$(document):&#x5219;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;, &#x5E76;&#x90FD;&#x4F1A;&#x6267;&#x884C;;
+</p>
+</div>
+</li>
+<li><a id="sec-1-2-1-3" name="sec-1-2-1-3"></a>&#x7B80;&#x5316;:<br><div class="outline-text-5" id="text-1-2-1-3">
+<p>
+$(document)&#x53EF;&#x4EE5;&#x7B80;&#x5316;: $(function() {&#x2026;})
+</p>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> jQuery&#x5BF9;&#x8C61;&#x4E0E;Dom&#x5BF9;&#x8C61;&#x8F6C;&#x6362;</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div><ol class="org-ol"><li><a id="sec-1-2-2-1" name="sec-1-2-2-1"></a>jQuery -&gt; DOM<br><div class="outline-text-5" id="text-1-2-2-1">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> $cr = $(<span class="string">&quot;#cr&quot;</span>); <span class="comment">//jQuery&#x5BF9;&#x8C61; </span></span><br><span class="line"><span class="keyword">var</span> cr = $cr[<span class="number">0</span>]; <span class="comment">//&#x6216;&#x8005; $cr.get(0)  //Dom&#x5BF9;&#x8C61;</span></span><br><span class="line">alert(cr.checked);</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</li>
+
+<li><a id="sec-1-2-2-2" name="sec-1-2-2-2"></a>DOM -&gt; jQuery<br><div class="outline-text-5" id="text-1-2-2-2">
+<div class="org-src-container">
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cr = <span class="built_in">document</span>.getElementById(<span class="string">&quot;cr&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> $cr = $(cr);</span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> jQuery&#x4E0E;&#x5176;&#x4ED6;&#x5E93;&#x51B2;&#x7A81;&#x89E3;&#x51B3;</h4>
+<div class="outline-text-4" id="text-1-2-3">
+</div><ol class="org-ol"><li><a id="sec-1-2-3-1" name="sec-1-2-3-1"></a>jQuery&#x5E93;&#x540E;&#x5BFC;&#x5165;<br><div class="outline-text-5" id="text-1-2-3-1">
+<p>
+jQuery.noConflict(); //&#x5C06;&#x53D8;&#x91CF;$&#x63A7;&#x5236;&#x6743;, &#x8BA9;&#x7ED9;&#x5176;&#x4ED6;&#x5E93;;
+</p>
+</div>
+</li>
+
+<li><a id="sec-1-2-3-2" name="sec-1-2-3-2"></a>jQuery&#x5148;&#x5BFC;&#x5165;<br><div class="outline-text-5" id="text-1-2-3-2">
+<p>
+&#x4F7F;&#x7528;jQuery&#x66FF;&#x4EE3;$,&#x5C31;&#x53EF;&#x4EE5;&#x4E86;;
+</p>
+</div>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> jQuery&#x9009;&#x62E9;&#x5668;</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> &#x5E38;&#x7528;&#x7684;CSS&#x9009;&#x62E9;&#x5668;</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ol class="org-ol">
+<li>&#x6807;&#x7B7E;: td {&#x2026;};
+</li>
+<li>id : #note {&#x2026;};
+</li>
+<li>&#x7C7B;&#x3000;: .note, div.note ;
+</li>
+<li>&#x7FA4;&#x7EC4;: td,p,div,a {&#x2026;}
+</li>
+<li>&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;: #links a {}
+</li>
+<li>&#x901A;&#x914D;&#x9009;&#x62E9;&#x5668;: * {..}
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> &#x5B8C;&#x5584;&#x7684;&#x5904;&#x7406;&#x673A;&#x5236;</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+$(&apos;#tt&apos;).css(&quot;color&quot;, &quot;red&quot;); //&#x5F53;$(&apos;#tt&apos;)&#x4E0D;&#x5B58;&#x5728;&#x65F6;,&#x4E0D;&#x4F1A;&#x62A5;&#x9519;;
+</p>
+
+<p>
+&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5B58;&#x5728;:
+</p>
+<ol class="org-ol">
+<li>if ( $(&apos;#tt&apos;).length&#x3000;&gt; 0) ;
+</li>
+<li>if ( $(&apos;#tt&apos;)<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> ) ;          //&#x8F6C;&#x6362;dom&#x5BF9;&#x8C61;&#x5224;&#x65AD;
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> jQuery&#x9009;&#x62E9;&#x5668;</h4>
+<div class="outline-text-4" id="text-1-3-3">
+</div><ol class="org-ol"><li><a id="sec-1-3-3-1" name="sec-1-3-3-1"></a>&#x57FA;&#x672C;&#x9009;&#x62E9;&#x5668;&#x540C;Css&#x5DEE;&#x4E0D;&#x591A;<br></li>
+
+<li><a id="sec-1-3-3-2" name="sec-1-3-3-2"></a>&#x5C42;&#x6B21;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-5" id="text-1-3-3-2">
+<ol class="org-ol">
+<li>$(&quot;ancestor descendant&quot;) : &#x540E;&#x4EE3;&#x5143;&#x7D20;;
+</li>
+<li>$(&quot;parent &gt; child&quot;): &#x5B50;&#x5143;&#x7D20;;
+</li>
+<li>$(&quot;prev+next&quot;): &#x7D27;&#x63A5;&#x5728;prev&#x5143;&#x7D20;&#x540E;&#x7684;next&#x5143;&#x7D20;; ==&gt;$(&apos;prev&apos;).next(&apos;netx&apos;)
+</li>
+<li>$(&apos;prev~siblings&apos;): prev&#x5143;&#x7D20; <b>&#x4E4B;&#x540E;</b> &#x7684;&#x6240;&#x6709;siblings&#x5143;&#x7D20;; ==&gt; $(&apos;prev&apos;).nextAll(&#x2026;);
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3" name="sec-1-3-3-3"></a>&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><ol class="org-ol"><li><a id="sec-1-3-3-3-1" name="sec-1-3-3-3-1"></a>&#x57FA;&#x672C;&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-1">
+<ol class="org-ol">
+<li>:first;  $(&quot;div:first&quot;) &#x9009;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;div&#x5143;&#x7D20;;
+</li>
+<li>:last;
+</li>
+<li>:not(xxx);
+</li>
+<li>:even; &#x7D22;&#x5F15;&#x4E3A;&#x5076;&#x6570;;
+</li>
+<li>:odd; &#x5947;&#x6570;;
+</li>
+<li>:eq(index);
+</li>
+<li>:gt(index), :lt(index);
+</li>
+<li>:header &#x9009;&#x53D6;&#x7F51;&#x9875;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x6807;&#x9898;
+</li>
+<li>:animated &#x5F53;&#x524D;&#x6B63;&#x5728;&#x6267;&#x884C;&#x52A8;&#x753B;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-2" name="sec-1-3-3-3-2"></a>&#x5185;&#x5BB9;&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-2">
+<ol class="org-ol">
+<li>:contain(text);
+</li>
+<li>:empty &#x9009;&#x53D6;&#x4E0D;&#x5305;&#x542B;&#x5B50;&#x5143;&#x7D20;&#x6216;&#x6587;&#x672C;&#x7684;&#x7A7A;&#x5143;&#x7D20;;
+</li>
+<li>:has(selector);
+</li>
+<li>:parent &#x9009;&#x53D6;&#x6240;&#x6709;&#x62E5;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x6216;&#x6587;&#x672C;&#x7684;&#x5143;&#x7D20;;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-3" name="sec-1-3-3-3-3"></a>&#x53EF;&#x89C1;&#x6027;&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-3">
+<ol class="org-ol">
+<li>:hidden;
+</li>
+<li>:visible;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-4" name="sec-1-3-3-3-4"></a>&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-4">
+<ol class="org-ol">
+<li>[attribute]; &#x6BD4;&#x5982;$(&apos;div[id]&apos;) &#x62E5;&#x6709;&#x5C5E;&#x6027;id&#x7684;&#x5143;&#x7D20;;
+</li>
+<li>[attribute=val];
+</li>
+<li>[attribute!=val];
+</li>
+<li>[attribute^=val]; &#x9009;&#x53D6;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x4EE5;val&#x5F00;&#x59CB;&#x7684;&#x5143;&#x7D20;;
+</li>
+<li>[attribute$=val]; &#x7ED3;&#x5C3E;;
+</li>
+<li>[attribute*=val]; &#x5305;&#x542B;;
+</li>
+<li>[selector][selector][selector] &#x590D;&#x5408;&#x5C5E;&#x6027;;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-5" name="sec-1-3-3-3-5"></a>&#x5B50;&#x5143;&#x7D20;&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-5">
+<ol class="org-ol">
+<li>:nth-child(index/even/odd/equation); &#x9009;&#x53D6;&#x6BCF;&#x4E2A;&#x7236;&#x5143;&#x7D20;&#x4E0B;&#x7D22;&#x5F15;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;;index&#x4ECE;1&#x5F00;&#x59CB;;
+</li>
+<li>:first-child;
+</li>
+<li>:last-child;
+</li>
+<li>:only-child;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-6" name="sec-1-3-3-3-6"></a>&#x8868;&#x5355;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-6">
+<p>
+&#x5BF9;&#x6240;&#x9009;&#x62E9;&#x7684; <b>&#x8868;&#x5355;&#x5143;&#x7D20;</b> &#x8FDB;&#x884C;&#x8FC7;&#x6EE4;;
+</p>
+<ol class="org-ol">
+<li>:enabled ; &#x9009;&#x53D6; <b>&#x8868;&#x5355;&#x5185;</b> &#x6240;&#x6709;&#x53EF;&#x7528;&#x5143;&#x7D20;;
+</li>
+<li>:disabled;
+</li>
+<li>:checked; &#x9009;&#x53D6;&#x6240;&#x6709;&#x88AB;&#x9009;&#x4E2D;&#x7684;&#x5143;&#x7D20;,&#x5355;&#x9009;&#x6846;,&#x590D;&#x9009;&#x6846;; &#x6BD4;&#x5982;:$(&apos;input:checked&apos;);
+</li>
+<li>:selected; &#x9009;&#x53D6;&#x6240;&#x6709;&#x88AB;&#x9009;&#x4E2D;&#x7684;&#x9009;&#x9879;&#x5143;&#x7D20;,&#x4E0B;&#x62C9;&#x5217;&#x8868;; $(&apos;select :selected&apos;);
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-7" name="sec-1-3-3-3-7"></a>&#x8868;&#x5355;&#x9009;&#x62E9;&#x5668;<br><div class="outline-text-6" id="text-1-3-3-3-7">
+<ol class="org-ol">
+<li>:input &#x9009;&#x53D6;&#x6240;&#x6709;&#x7684;&lt;input&gt;&#x3001;&lt;textarea&gt;&#x3001;&lt;select&gt;&#x3001;&lt;button&gt;&#x5143;&#x7D20;&#xFF1B;
+</li>
+<li>&#xFF1A;text &#x6240;&#x6709;&#x5355;&#x884C;&#x6587;&#x672C;&#x6846;&#xFF1B;
+</li>
+<li>:password &#x5BC6;&#x7801;&#x6846;;
+</li>
+<li>:radio &#x5355;&#x9009;&#x6846;;
+</li>
+<li>:checkbox
+</li>
+<li>:image
+</li>
+<li>:reset
+</li>
+<li>:button
+</li>
+<li>:file
+</li>
+<li>hidden
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-8" name="sec-1-3-3-3-8"></a>&#x5176;&#x4ED6;&#x6CE8;&#x610F;<br><ol class="org-ol"><li><a id="sec-1-3-3-3-8-1" name="sec-1-3-3-3-8-1"></a>&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x5305;&#x542B;., #, (, ]&#x7B49;&#x7279;&#x6B8A;&#x5B57;&#x7B26;<br><div class="outline-text-7" id="text-1-3-3-3-8-1">
+<p>
+&#x4F7F;&#x7528;&#x8F6C;&#x4E49;&#x7B26;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;; \\; &#x6BD4;&#x5982;$(&apos;#id\\#b&apos;);
+</p>
+</div>
+</li>
+
+<li><a id="sec-1-3-3-3-8-2" name="sec-1-3-3-3-8-2"></a>&#x5982;&#x679C;&#x542B;&#x6709;&#x7A7A;&#x683C;,&#x610F;&#x4E49;&#x4E0D;&#x540C;<br></li></ol>
+</li></ol>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> jQuery&#x64CD;&#x4F5C;dom</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> jQuery&#x4E2D;&#x7684;dom&#x64CD;&#x4F5C;</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div><ol class="org-ol"><li><a id="sec-1-4-1-1" name="sec-1-4-1-1"></a>&#x67E5;&#x627E;&#x8282;&#x70B9;<br></li>
+
+<li><a id="sec-1-4-1-2" name="sec-1-4-1-2"></a>&#x521B;&#x5EFA;&#x8282;&#x70B9;<br><div class="outline-text-5" id="text-1-4-1-2">
+<ol class="org-ol">
+<li>&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;, &#x4F7F;&#x7528;$(..); &#x6BD4;&#x5982;:var $li<sub>1</sub> = $(&quot;&lt;li&gt;&lt;/li&gt;&quot;); $(&quot;ul&quot;).append($li<sub>1</sub>);
+</li>
+<li>&#x521B;&#x5EFA;&#x6587;&#x672C;&#x8282;&#x70B9;;&#x540C;&#x4E0A;;  var $li<sub>1</sub> = $(&quot;&lt;li&gt;&#x82F9;&#x679C;&lt;/li&gt;&quot;);
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-1-3" name="sec-1-4-1-3"></a>&#x63D2;&#x5165;&#x8282;&#x70B9;<br><div class="outline-text-5" id="text-1-4-1-3">
+<ol class="org-ol">
+<li>append;
+</li>
+<li>appendTo; &#x4E0E;append&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x4E3B;&#x4F53;&#x5BA2;&#x4F53;&#x76F8;&#x53CD;;
+</li>
+<li>prepend;
+</li>
+<li>prependTo;
+</li>
+<li>after;
+</li>
+<li>insertAfter;
+</li>
+<li>before;
+</li>
+<li>insertBefore;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-1-4" name="sec-1-4-1-4"></a>&#x5220;&#x9664;&#x8282;&#x70B9;<br><div class="outline-text-5" id="text-1-4-1-4">
+<ol class="org-ol">
+<li>remove(); &#x6BD4;&#x5982;$(&quot;ul li:eq(1)&quot;).remove(); &#x6216; $(&quot;ul li&quot;).remove(&quot;li[title!=&#x82F9;&#x679C;]&quot;);
+</li>
+<li>empty(); &#x6E05;&#x7A7A;&#x8282;&#x70B9;, &#x4E0D;&#x662F;&#x5220;&#x9664;&#x8282;&#x70B9;;&#x6E05;&#x7A7A;&#x5185;&#x5BB9;;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-1-5" name="sec-1-4-1-5"></a>clone(); &#x590D;&#x5236;&#x8282;&#x70B9;;<br></li>
+
+<li><a id="sec-1-4-1-6" name="sec-1-4-1-6"></a>&#x66FF;&#x6362;&#x8282;&#x70B9;:replaceWith()<br></li>
+
+<li><a id="sec-1-4-1-7" name="sec-1-4-1-7"></a>&#x5305;&#x88F9;&#x8282;&#x70B9;:wrap, wrapAll, wrapInner<br></li>
+
+<li><a id="sec-1-4-1-8" name="sec-1-4-1-8"></a>&#x5C5E;&#x6027;&#x64CD;&#x4F5C;<br><div class="outline-text-5" id="text-1-4-1-8">
+<ol class="org-ol">
+<li>&#x83B7;&#x53D6;,&#x8BBE;&#x7F6E;: attr(&quot;key&quot;), attr(&quot;key&quot;, &quot;val&quot;);
+</li>
+<li>&#x5220;&#x9664;: removeAttr
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-1-9" name="sec-1-4-1-9"></a>&#x6837;&#x5F0F;&#x64CD;&#x4F5C;<br><div class="outline-text-5" id="text-1-4-1-9">
+<ol class="org-ol">
+<li>&#x83B7;&#x53D6;, &#x8BBE;&#x7F6E;: attr(&quot;class&quot;, &quot;xx&quot;);
+</li>
+<li>&#x8FFD;&#x52A0;; addClass(&quot;class&quot;, &quot;yy&quot;);
+</li>
+<li>&#x79FB;&#x9664;; removeClass(&quot;xx yy&quot;); &#x79FB;&#x9664;&#x6240;&#x6709;removeClass();
+</li>
+<li>&#x5207;&#x6362;; toggle();
+</li>
+<li>&#x5224;&#x65AD;&#x662F;&#x5426;&#x542B;&#x6709;; hasClass;
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-1-10" name="sec-1-4-1-10"></a>&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;html,&#x6587;&#x672C;&#x548C;&#x503C;<br><div class="outline-text-5" id="text-1-4-1-10">
+<ol class="org-ol">
+<li>html(); &#x7C7B;&#x4F3C;innerHTML, &#x7528;&#x6765;&#x8BFB;&#x53D6;&#x6216;&#x8BBE;&#x7F6E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x7684;html&#x7684;&#x5185;&#x5BB9;;
+</li>
+<li>text() ==&gt;innerText;
+</li>
+<li>val();
+</li>
+</ol>
+</div>
+</li>
+
+<li><a id="sec-1-4-1-11" name="sec-1-4-1-11"></a>&#x904D;&#x5386;<br><div class="outline-text-5" id="text-1-4-1-11">
+<ol class="org-ol">
+<li>children()
+</li>
+<li>next();
+</li>
+<li>prev();
+</li>
+<li>siblings(): &#x83B7;&#x53D6;&#x524D;&#x540E;&#x6240;&#x6709;&#x7684;&#x540C;&#x8F88;&#x5143;&#x7D20;;
+</li>
+<li>closest()&#x83B7;&#x53D6;&#x6700;&#x8FD1;&#x7684;&#x5339;&#x914D;&#x5143;&#x7D20;;
+</li>
+<li>&#x5176;&#x4ED6;:find, filter, nextAll, prevAll, parent
+</li>
+</ol>
+</div>
+</li>
+
+
+<li><a id="sec-1-4-1-12" name="sec-1-4-1-12"></a>CSS-DOM&#x64CD;&#x4F5C;<br><div class="outline-text-5" id="text-1-4-1-12">
+<ol class="org-ol">
+<li>css();
+</li>
+<li>offset()
+</li>
+<li>position()
+</li>
+<li>scrollTop, scrollLeft;
+</li>
+</ol>
+</div>
+</li></ol>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>DEFINITION NOT FOUND.</p></div>
+
+
+</div>
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/05/19/js/" rel="prev" title="javascript重新介绍">
+                javascript重新介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Werid Lin" />
+          <p class="site-author-name" itemprop="name">Werid Lin</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">Kategorien</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sec-1"><span class="nav-number">1.</span> <span class="nav-text">1 JQuery学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-1"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 JQuery为什么会出现?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-1-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1 javascript的弊端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-1-2"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 JQuery优点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-2"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 jQuery与dom</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-2-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1 $(document).ready()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-2-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2 jQuery对象与Dom对象转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-2-3"><span class="nav-number">1.2.3.</span> <span class="nav-text">1.2.3 jQuery与其他库冲突解决</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-3"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 jQuery选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.3.1 常用的CSS选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">1.3.2 完善的处理机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-3-3"><span class="nav-number">1.3.3.</span> <span class="nav-text">1.3.3 jQuery选择器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sec-1-4"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 jQuery操作dom</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sec-1-4-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 jQuery中的dom操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Footnotes: </span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Werid Lin</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'iiwerid';
+      var disqus_identifier = '2014/03/06/jquery_note/';
+      var disqus_title = 'JQuery学习';
+      var disqus_url = 'http://iiwerid.github.io/2014/03/06/jquery_note/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
